@@ -6,7 +6,6 @@ ao tamanho de seus lados. (Neste exemplo deve-se abstrair as condições matemá
 triângulo).
 */
 
-//Not working the way I thought, need to make some changes
 function trianglesType (a, b, c) {
     if ((a != b) && (b != c) && (a != c)) {
         console.log('Scalene Triangle')
