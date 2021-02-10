@@ -6,12 +6,19 @@ ao tamanho de seus lados. (Neste exemplo deve-se abstrair as condições matemá
 triângulo).
 */
 
+//Not working the way I thought, need to make some changes
 function trianglesType (a, b, c) {
     if ((a != b) && (b != c) && (a != c)) {
         console.log('Scalene Triangle')
-    } else {
-        console.log('unclassified')
+    } 
+    if ((a = b) && (a != c) || (a = c) && (a != b) || (b = c) && (b != a)) {console.log('Isoccel Triangle')}
+    else {
+            console.log('unclassified')
+        
     }
 }
 
-trianglesType(3, 2, 3)
+
+
+
+trianglesType(1, 3, 2)
