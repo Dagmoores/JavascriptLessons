@@ -5,3 +5,14 @@ Crie uma função que recebe os comprimentos dos três lados de um triângulo e 
 ao tamanho de seus lados. (Neste exemplo deve-se abstrair as condições matemáticas de existência de um
 triângulo).
 */
+
+//Not working the way I thought, need to make some changes
+function trianglesType (a, b, c) {
+    if ((a != b) && (b != c) && (a != c)) {
+        console.log('Scalene Triangle')
+    } else {
+        console.log('unclassified')
+    }
+}
+
+trianglesType(3, 2, 3)
