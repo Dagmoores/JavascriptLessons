@@ -11,3 +11,12 @@ function simpleInterest (bankStock, interest, time) {
 }
 
 simpleInterest(1000, 0.1, 6)
+
+//CompoundInterest
+// M = C (1 + i)t
+function compoundInterest (bankStock, interest, time) {
+    result = bankStock * Math.pow((1 + interest), time)
+    console.log(result.toFixed(2))
+}
+
+compoundInterest(1000, 0.1, 6)
