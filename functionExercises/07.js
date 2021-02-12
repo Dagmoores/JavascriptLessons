@@ -8,16 +8,17 @@ que os resultados sejam iguais. Caso o delta seja negativo, retorne, ao invés d
 */
 
 function bhaskaraBoy (ax2, bx, c) {
-    delta = bx - (4 * ax2 * c)
+    delta = Math.pow(bx, 2) - (4 * ax2 * c)
     if (delta < 0) {
       console.log('Delta negativo')  
-    }else {
-    var x1 = (-bx + Math.sqrt(delta)) / 2
+    } else {
+    x1 = (-bx + Math.sqrt(delta)) / 2
     
-    var x2 = (-bx + Math.sqrt(delta)) / 2
+    x2 = (-bx - Math.sqrt(delta)) / 2
+    console.log('x1:',x1,'x2:', x2)
     }
-    return x1, x2
 }
 
 bhaskaraBoy(3, -5, 12)
 bhaskaraBoy(4,  4, 1)
+bhaskaraBoy(1,  -3, -10)
