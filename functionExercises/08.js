@@ -22,8 +22,10 @@ let lowestScore = scores[0]
             recordsBreakingAmount++ 
         }else if (lowestScore > scores[i]) {
             lowestScore = scores[i]
-        /*Here we are using plus 1, cause we want the function to return the number of the game, and no
-        the position of the score in the array*/
+        /*
+        *Here we are using plus 1, cause we want the function to return the number of the game, and no
+        *the position of the score in the array
+        */
             worstGame = 1 + i
         }
     }
