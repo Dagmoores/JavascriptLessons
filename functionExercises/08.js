@@ -33,11 +33,3 @@ let lowestScore = scores[0]
 }
 
 console.log(toCompare(scoresString))
-        the position of the score in the array*/
-        worstGame = 1 + i
-    }
-    }
-    return [recordsBreakingAmount, worstGame]
-}
-
-console.log(toCompare(scoresString))
