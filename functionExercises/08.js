@@ -7,16 +7,19 @@ vetor com o número de vezes que ele bateu seu recorde de maior número de ponto
 jogo. (Número do pior jogo).
 */
 
-const values = "30, 20, 30, 10, 90, 60, 70, 80"
-
-
-function toCompare (values){
-const splitsValues = values.split(", ")
+const scoresString = "30, 20, 30, 10, 90, 60, 70, 80"
+ 
+function toCompare (scoresString) {
+const scores = scoresString.split(", ")
 let recordsBreakingAmount = 0
-/* this indice must be one, cause we are going to add to it once we start to check the values of the list, so, if we start this 'worstGame' number with 0, we're going to add one and ... */
 let worstGame = 1
+let highestScore = scores[0]  
+let lowestScore = scores[0]
 
-
+for (i = 1; i < scores.length; i++) {
+    if (highestScore > scores[i]) {
+        score[i] = highestScore
+        recordsBreakingAmount++ 
+    }
+    }
 }
-
-console.log(toCompare())
