@@ -9,6 +9,7 @@ seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondame
 e o aluno será aprovado.
 */
 
+////Not Finished, I need to do more tests
 function classifiedNotes(grade) {
      if (grade > 40) {
         let roundedGrade = grade + (5 - grade % 5)
