@@ -9,18 +9,22 @@ seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondame
 e o aluno será aprovado.
 */
 
-function classifiedNotes (grade) {
-    let roundedGrade = (grade + (grade % 2 + grade % 5))
-    if (grade % 2 != 0 || 5) {
-        grade = roundedGrade
-        return roundedGrade
-    }    
-    
-    if (grade < 0 || grade > 100) {
-    console.log('Invalid Note')
-    }   else if (grade < 38) {
-    console.log('Disaproved')
-    } 
+//Not Finished, I need to do more tests
+function classifiedNotes(grade) {
+     if (grade > 40) {
+        let roundedGrade = grade + (5 - grade % 5)
+        if ((grade % 2 !== 0) || (grade % 5 !== 0)) {
+            return console.log('Aprovado com nota:', roundedGrade)}}
+        else if (0 < grade < 40) {
+        return console.log('Disaproved')
+        }else {console.log('Invalid Note')
+        }
 }
 
+
+
 classifiedNotes(43)
+classifiedNotes(33)
+classifiedNotes(47)
+classifiedNotes(58)
+classifiedNotes(69)
