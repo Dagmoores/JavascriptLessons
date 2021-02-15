@@ -9,12 +9,13 @@ seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondame
 e o aluno será aprovado.
 */
 
-function grades (grade) {
+function classifiedNotes (grade) {
 
-if ((grade % 5) != 5 || 0) {
+if (38 >= grade < 10) {
+    grade = 10
+    console.log(grade)
+}    
     
-    
-}
     
 if (grade < 0 || grade > 100) {
 console.log('Invalid Note')
@@ -22,3 +23,5 @@ console.log('Invalid Note')
 console.log('Reprovado')
 } 
 }
+
+classifiedNotes(9)
