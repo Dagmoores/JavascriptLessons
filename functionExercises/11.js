@@ -9,20 +9,38 @@ mensagem e retornando true ou false.
 */
 
 function leapYearCalc (year) {
-    leapYearCheacker = year % 4
-    learYearCheacker100 = year % 100
-    learYearCheacker400 = year % 400
+    let leapYearCheacker = year % 4
+    let leapYearCheacker100 = year % 100
+    let leapYearCheacker400 = year % 400
+    
+    if (Number.isInteger(leapYearCheacker400)) {
+        console.log('It is a leap year 2')
+        console.log(leapYearCheacker400)
+        
+        return true
+    } else if (Number.isInteger(leapYearCheacker100)) {
+        console.log('It isnt a leap year 3')
+        return false
+    }
+}   
+
+
+
+leapYearCalc (100)
+console.log(100 % 400)
+
+
+
+
+
+
+
+/*
     if (Number.isInteger(leapYearCheacker)) {
-        console.log('It is a leap year')
+        console.log('It is a leap year 1')
         return true
     } else {
         console.log('It isnt a leap year')
         return false
     }
-    //keep from here
-    if ()
-    
-}   
-
-
-leapYearCalc (2000)
+*/
