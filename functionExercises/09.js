@@ -12,11 +12,11 @@ e o aluno será aprovado.
 //Not Finished, I need to make the last 2 results to work.
 function classifiedNotes(grade) {
     let roundedGrade = grade + (5 - grade % 5)
-     if (grade > 40 && (roundedGrade - grade) <= 3) {
+    if (grade > 40 && (roundedGrade - grade) < 3) {
             return console.log('Aprovado com nota:', roundedGrade)}
-         else {return console.log('Aprovado com nota:', grade)}
-    if (0 < grade < 40) {return console.log('Disaproved')
-        }else {return console.log('Invalid Note')
+    if (grade > 40 && (roundedGrade - grade) >= 3) {return console.log('Aprovado com nota:', grade)}
+    else if (0 < grade < 40) {return console.log('Disaproved')
+        }else if (grade < 0 || grade > 100) {return console.log('Invalid Note')
         }
 }
 
@@ -25,8 +25,11 @@ function classifiedNotes(grade) {
 classifiedNotes(45)
 classifiedNotes(43)
 classifiedNotes(41)
+classifiedNotes(42)
 classifiedNotes(47)
+classifiedNotes(52)
 classifiedNotes(58)
 classifiedNotes(69)
 classifiedNotes(33)
 classifiedNotes(0.2)
+classifiedNotes(-1)
