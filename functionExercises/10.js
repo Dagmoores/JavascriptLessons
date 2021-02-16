@@ -6,13 +6,13 @@ ou false.
 function integerChecker (integer) {
     integerDivided = integer / 3
     if (Number.isInteger(integerDivided)) {
-        return console.log('It is divisible by 3')
+        return true
     } else {
-        return console.log('It isnt divisible by 3')
+        return false
     }
 }
 
-integerChecker(3)
-integerChecker(4)
-integerChecker(17)
-integerChecker(21)
+console.log(integerChecker(3))
+console.log(integerChecker(4))
+console.log(integerChecker(17))
+console.log(integerChecker(21))
