@@ -15,7 +15,7 @@ function classifiedNotes(grade) {
     if ((grade > 40 && grade <= 100) && (roundedGrade - grade) < 3) {
             return console.log('Aproved with grade:', roundedGrade)}
     if ((grade > 40 && grade <= 100) && (roundedGrade - grade) >= 3) {return console.log('Aprovado com nota:', grade)}
-    if (grade > 0 && grade < 40) {return console.log('Disaproved with')
+    if (grade > 0 && grade < 40) {return console.log('Disaproved with', grade)
         }
     if (grade < 0 || grade > 100) {return console.log('Invalid Note')
         }
