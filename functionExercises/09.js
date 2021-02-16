@@ -13,11 +13,11 @@ e o aluno será aprovado.
 function classifiedNotes(grade) {
     let roundedGrade = grade + (5 - grade % 5)
     if ((grade > 40 && grade <= 100) && (roundedGrade - grade) < 3) {
-            return console.log('Aproved with grade:', roundedGrade)}
-    if ((grade > 40 && grade <= 100) && (roundedGrade - grade) >= 3) {return console.log('Aprovado com nota:', grade)}
-    if (grade > 0 && grade < 40) {return console.log('Disaproved with', grade)
+            return console.log('Aproved with:', roundedGrade)}
+    if ((grade > 40 && grade <= 100) && (roundedGrade - grade) >= 3) {return console.log('Aproved with:', grade)}
+    if (grade > 0 && grade < 40) {return console.log('Disaproved with:', grade)
         }
-    if (grade < 0 || grade > 100) {return console.log('Invalid Note')
+    if (grade < 0 || grade > 100) {return console.log('Invalid grade')
         }
 }
 
