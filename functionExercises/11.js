@@ -13,7 +13,7 @@ function leapYearCalc (year) {
     let leapYearCheacker100 = year / 100
     let leapYearCheacker400 = year / 400
     
-     if (Number.isInteger(leapYearCheacker100)) {
+     if ((Number.isInteger(leapYearCheacker100)) && !(Number.isInteger(leapYearCheacker400))) {
         console.log('It isnt a leap year')
         return false
     } else if (Number.isInteger(leapYearCheacker)) {
@@ -23,4 +23,7 @@ function leapYearCalc (year) {
 }   
 
 
-leapYearCalc(44)
+leapYearCalc(4)
+leapYearCalc(33)
+leapYearCalc(200)
+leapYearCalc(400)
