@@ -19,6 +19,9 @@ function leapYearCalc (year) {
     } else if (Number.isInteger(leapYearCheacker)) {
         console.log('It is a leap year')
         return true
+    } else {
+        console.log('It isnt a leap year')
+        return false
     }
 }   
 
@@ -27,3 +30,6 @@ leapYearCalc(4)
 leapYearCalc(33)
 leapYearCalc(200)
 leapYearCalc(400)
+leapYearCalc(2021)
+leapYearCalc(2022)
+leapYearCalc(2024)
