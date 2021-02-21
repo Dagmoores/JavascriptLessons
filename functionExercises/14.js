@@ -6,16 +6,24 @@ também um default, que retornará uma mensagem de erro no console.
 */
 
 function fruits (apple, kiwi, watermelon) {
-    switch (fruits) {
+    switch (apple, kiwi, watermelon) {
         case 'apple': 
-            return 'We dont sell this fruit here'
+            console.log('We dont sell this fruit here');
             break;
-        case 'kiwi':
-            return 'We are short of kiwis'
+        case kiwi:
+            console.log('We are short of kiwis')
             break;
             //keep from here
-        case 'watermelon':
-            return 'Here it is, its 3 reais the ..;
-        
+        case watermelon:
+            console.log('Here it is, its 3 reais the kilogram')
+            break;
+        default: console.log('unknow fruit');
     }
 }
+
+fruits(apple)
+fruits(kiwi)
+fruits(watermelon)
+fruits(banana)
+
+ //need to test. out of time
