@@ -5,25 +5,23 @@ escassez de kiwis”. Caso melancia, retorne: “Aqui está, são 3 reais o quil
 também um default, que retornará uma mensagem de erro no console.
 */
 
-function fruits (apple, kiwi, watermelon) {
-    switch (apple, kiwi, watermelon) {
+function fruits (expr) {
+    switch (expr) {
         case 'apple': 
             console.log('We dont sell this fruit here');
             break;
-        case kiwi:
+        case 'kiwi':
             console.log('We are short of kiwis')
             break;
             //keep from here
-        case watermelon:
+        case 'watermelon':
             console.log('Here it is, its 3 reais the kilogram')
             break;
         default: console.log('unknow fruit');
     }
 }
 
-fruits(apple)
-fruits(kiwi)
-fruits(watermelon)
-fruits(banana)
-
- //need to test. out of time
+fruits('apple')
+fruits('kiwi')
+fruits('watermelon')
+fruits('banana')
