@@ -13,13 +13,13 @@ function careerPath (plan) {
     const wage = 1350
     switch (plan){
     case 'A':
-       return wage + (wage * 0,10)
+       return wage + (wage * 0.10)
         break;
     case 'B':
-        return wage + (wage * 0,15)
+        return wage + (wage * 0.15)
         break;
     case 'C':
-        return wage + (wage * 0,20)
+        return wage + (wage * 0.20)
         break;
     }
 }
