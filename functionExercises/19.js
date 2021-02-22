@@ -12,30 +12,70 @@ a ser pago por aquele lanche. Considere que a cada execução somente será calc
 comando switch. Crie um caso default para produto não existente
 */
 
-function foodPaymentCalculator (code) {
-    let amount >= 1
+function foodPaymentCalculator (code, amount) {
+    if (amount >= 1) {
     switch (code) {
         case 100: 
-           if (amount = 1) {
-                console.log('Here it is your hot dog. The price is:', 13.00 * amount)
+           if (amount == 1) {
+                console.log("Here it is your hot dog. The price is:", (13.00 * amount).toFixed(2), "reais")
+           } else {
+               console.log("Here are your hot dogs, the price is:", (13.00 * amount).toFixed(2), "reais" )
            }
             break;
         case 200:
-            console.log(4.00 * amount)
+            if (amount == 1) {
+                console.log("Here it is your simple hamburger. The price is:", (4.00 * amount).toFixed(2), "reais")
+           } else {
+               console.log("Here are your simple hamburgers, the price is:", (4.00 * amount).toFixed(2), "reais" )
+           }
             break;
         case 300:
-            console.log(5.50 * amount)
+             if (amount == 1) {
+                console.log("Here it is your refrigerant. The price is:", (5.50 * amount).toFixed(2), "reais")
+           } else {
+               console.log("Here are your cheeseburgers, the price is:", (5.50 * amount).toFixed(2), "reais" )
+           }
             break;
         case 400:
-            console.log(7.50 * amount)
+            if (amount == 1) {
+                console.log("Here it is your bauru. The price is:", (7.50 * amount).toFixed(2), "reais")
+           } else {
+               console.log("Here are your simple baurus, the price is:", (7.50 * amount).toFixed(2), "reais" )
+           }
             break;
         case 500:
-            console.log(3.50 * amount)
+             if (amount == 1) {
+                console.log("Here it is your soft drink. The price is:", (3.50 * amount).toFixed(2), "reais")
+           } else {
+               console.log("Here are your soft drinks, the price is:", (3.50 * amount).toFixed(2), "reais" )
+           }
             break;
         case 600:
-            console.log(2.80 * amount)
+                if (amount == 1) {
+                console.log("Here it is your juice. The price is:", (2.80 * amount).toFixed(2), "reais")
+           } else {
+               console.log("Here are your juices, the price is:", (2.80 * amount).toFixed(2), "reais" )
+           }
             break;
         default: 
             console.log ('Invalid Item')
-    }
-} 
+        }
+    } else {console.log("Can't do this")
+}
+}
+
+foodPaymentCalculator(100, 1)
+foodPaymentCalculator(100, 3)
+foodPaymentCalculator(200, 1)
+foodPaymentCalculator(200, 7)
+foodPaymentCalculator(300, 1)
+foodPaymentCalculator(300, 4)
+foodPaymentCalculator(400, 1)
+foodPaymentCalculator(400, 3)
+foodPaymentCalculator(500, 1)
+foodPaymentCalculator(500, 12)
+foodPaymentCalculator(600, 1)
+foodPaymentCalculator(600, 3)
+foodPaymentCalculator(700, 3)
+foodPaymentCalculator(700, 0)
+foodPaymentCalculator(300, -1)
