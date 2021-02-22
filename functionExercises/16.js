@@ -1,3 +1,4 @@
+  
 /*
 16) Utilizando a estrutura do Switch faça um programa que simule uma calculadora básica. O programa recebe
 como parâmetros dois valores numéricos e uma string referente à operação e a realize com os valores
@@ -5,18 +6,30 @@ numéricos na ordem que foram inseridos. Por exemplo: calculadora (2, ‘+’, 3
 3. Dica: Os sinais das operações são: ‘+’. ‘-’, ‘*’ e ‘/’. Crie um caso default para operações inválidas.
 */
 
-function calc(number1, number2, operation) {
+function calc(operation, number1, number2) {
     switch (operation) {
         case 'sum':
             console.log(number1 + number2)
-            break
+            break;
         case 'subtraction':
             console.log(number1 - number2)
-            break
+            break;
         case 'division':
             console.log(number1 / number2)
-            break
+            break;
             //keep from here
-        case ''
+        case 'multiplication':
+            console.log(number1 * number2)
+            break;
+            default:
+            console.log('invalid Operation')
     }
 }
+
+calc('sum', 1, 2)
+calc('subtraction', 100, 30)
+calc('subtraction', 100, 200)
+calc('division', 55, 4)
+calc('division', 55, 0)
+calc('multiplication', 4, 4)
+calc('pow', 4, 4)
