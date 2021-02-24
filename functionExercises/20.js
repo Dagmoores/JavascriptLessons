@@ -7,21 +7,17 @@ informar apenas a seguinte informação (note que não foram exibidas informaç�
 nota(s) de R$ 10. 1 nota(s) de R$ 5. 3 nota(s) de R$ 1.
 */
 
-function requiredNotes (value) {
-    let x1 = value / 100
-    let x2 = x1 / 50
-    let x3 = x2 / 10
-    let x4 = x3 / 5
-    let x5 = x4 / 1
-    if ((value % 100) > 0) {
-        if ((x2 % 50 > 0)) {
-            if ((x3 % 10 > 0)) {
-                if ((x4 % 5 > 0)) {
-                }
-            }
-        }
-    }
-    console.log('Here is your change', Math.trunc(x1), Math.trunc(x2), Math.trunc(x3), Math.trunc(x4),Math.trunc(x5))
+function requiredNotes (x) {
+    
+    let x1 = x / 100
+    let x2 = x % 100
+    let x3 = x2 % 50
+    let x4 = x3 % 10
+    let x5 = x4 % 5
+    let x6 = x4 % 1
+
+
+    console.log(`${Math.trunc(x1)} note(s) of R$ 100`, )
     }
     
     requiredNotes(375)
