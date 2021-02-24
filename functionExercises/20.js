@@ -16,8 +16,9 @@ function requiredNotes (x) {
     let x5 = x4 % 5
     let x6 = x4 % 1
 
-
-    console.log(`${Math.trunc(x1)} note(s) of R$ 100`, )
-    }
+    
+    if (x1 > 0) {console.log(Math.trunc(x1), "note(s) of R$ 100,")} 
+    if (x2 > 0) {console.log(Math.trunc(x2), "notes of 50,")} if (x3 > 0) {console.log(Math.trunc(x3), "notes of 10,")} 
+}
     
     requiredNotes(375)
