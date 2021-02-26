@@ -8,6 +8,16 @@ que
 5. Repita a operação até que o código lido seja negativo.
 */
 
-function calcNote (x, y, x) {
-  
+function calcNote (x, y, z) {
+  if (x > y && x > z) {
+    noteWeight1 = x * 4
+    noteWeight2 = y * 3
+    noteWeight3 = y * 3
+  }
+  if (y > x && y > z) {
+    noteWeight1 = y * 4
+  }
+  if (z > x && z > y) {
+    noteWeight1 = z * 4
+  }              
 }
