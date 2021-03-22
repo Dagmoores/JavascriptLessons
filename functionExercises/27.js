@@ -36,13 +36,10 @@ function heightCalc (heightA, heightB, growthRateA, growthRateB, ageA,
      for (i = ageB; (heightA >= heightB) && i < 21; i++) {
       heightA = heightA + growthRateA
       heightB = heightB + growthRateB
-      console.log(i)
-      console.log(heightA)
-      console.log(heightB)
        
      } if (heightB > heightA) {
-      console.log("But the kid B is gonna be bigger than A in", 
-                  (i - ageB), "years")
+      console.log("But the kid B is gonna be bigger than A in",
+                  (i - ageB - 1), "years")
      }
   }
    /*  
