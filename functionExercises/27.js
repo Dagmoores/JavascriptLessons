@@ -5,15 +5,27 @@ menor, caso exista se a criança menor ultrapassará a maior e em quantos
 anos isso acontecerá. Utilize centímetros para as unidades de medida.
 */
 
-let ChildA = {
+let childA = {
   height: 1.10,
   growthRate: 0.10
 }
 
-let ChildB = {
+let childB = {
   height: 1.00,
   growthRate: 0.110
 }
 
 function heightCalc (height, growthRate) {
+  
+    heightA = childA.height
+    heightB = childB.height
+
+   if (heightA > heightB) {
+     console.log("The Child A is Bigger than the child B")
+   } else {
+     console.log("The Child B is Bigger than the child A")
+   }
+  
 }
+
+heightCalc()
