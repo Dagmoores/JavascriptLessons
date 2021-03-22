@@ -7,13 +7,13 @@ anos isso acontecerá. Utilize centímetros para as unidades de medida.
 
 let childA = {
   height: 1.10,
-  growthRate: 0.05,
+  growthRate: 0.06,
   age: 11
 }
 
 let childB = {
-  height: 1.00,
-  growthRate: 0.06,
+  height: 1.15,
+  growthRate: 0.05,
   age: 8
 }
 
@@ -42,7 +42,7 @@ function heightCalc (heightA, heightB, growthRateA, growthRateB, ageA,
                   (i - ageB - 1), "years")
      }
   }
-       if (heightB > heightA && growthRateA < growthRateB) {
+       else if (heightB > heightA && growthRateA < growthRateB) {
      console.log("The Child B is Bigger than the child A")
     }
     else if (heightB > heightA && growthRateA > growthRateB) {
