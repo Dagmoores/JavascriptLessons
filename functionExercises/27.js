@@ -17,24 +17,33 @@ let childB = {
   age: 8
 }
 
-function heightCalc (heightA, heightB, growthRateA, growthRateB) {
+function heightCalc (heightA, heightB, growthRateA, growthRateB, ageA,
+                    ageB) {
   
     heightA = childA.height
     heightB = childB.height
     growthRateA = childA.growthRate
     growthRateB = childB.growthRate
+    ageA = childA.age
+    ageB = childB.age
 
-    if (heightA > heightB && growthRabeB < growthRateA) {
+    if (heightA > heightB && growthRateB < growthRateA) {
      console.log("The Child A is Bigger than the child B")
     }
     else if (heightA > heightB && growthRateB > growthRateA) {
      console.log("The Child A is Bigger than the child B")
-     for (i = heightB; //stopped here) )
-     
+     for (i = ageB; heightB < heightA; i++) {
+      heightB = heightB + growthRateB
+     } if (heightB > heightA) {
+      console.log("But the kid B is gonna be bigger than A in", i, 
+       "years")
+     }
+  }
+   /*  
    } else {
      console.log("The Child B is Bigger than the child A")
    }
-
+   */
    
   
 }
