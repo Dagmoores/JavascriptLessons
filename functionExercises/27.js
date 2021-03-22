@@ -42,13 +42,23 @@ function heightCalc (heightA, heightB, growthRateA, growthRateB, ageA,
                   (i - ageB - 1), "years")
      }
   }
-   /*  
-   } else {
+       if (heightB > heightA && growthRateA < growthRateB) {
      console.log("The Child B is Bigger than the child A")
-   }
-   */
-   
-  
+    }
+    else if (heightB > heightA && growthRateA > growthRateB) {
+     console.log("The Child B is Bigger than the child A")
+      
+     for (i = ageA; (heightB >= heightA) && i < 21; i++) {
+      heightA = heightA + growthRateA
+      heightB = heightB + growthRateB
+       
+     } if (heightA > heightB) {
+      console.log("But the kid A is gonna be bigger than B in",
+                  (i - ageA - 1), "years")
+     }
+  }
+
+     
 }
 
 heightCalc()
