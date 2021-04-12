@@ -8,7 +8,7 @@ let inside = 0
 let outside = 0
 
 for (i = 0; i < vector.length; i++) {
-  if (vector[i] >= 10 && <= 20) {
+  if (vector[i] >= 10 && vector[i] <= 20 ) {
     inside++
   } else {
     outside++
