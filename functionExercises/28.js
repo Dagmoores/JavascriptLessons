@@ -8,11 +8,11 @@ let odd = []
 for (let i = 0; i < vector.length ; i++) {
 
   if (vector[i] % 2 != 0) {
-    pair.push(vector[i])
-  } else {
     odd.push(vector[i])
+  } else {
+    pair.push(vector[i])
   }
 }
 
-console.log(pair)
-console.log(odd)
+console.log(`pair: ${pair}`)
+console.log(`odd: ${odd}`)
