@@ -5,19 +5,16 @@ ambas palavras. */
 
 let string1 = "abc";
 let string2 = "ABC";
-let checker1 = [];
-let checker2 = [];
+let splited1 = [];
+let splited2 = [];
 
 function stringChecker(string1, string2) {
-  string1 = string1.toUpperCase;
-  string2 = string2.toUpperCase;
-  checker1 = string1.split("");
-  checker2 = string2.split("");
-  if(checker1 == checker2) {
-    return true;
-  } else {
-    return false;
-  }
+  string1 = string1.toUpperCase();
+  string2 = string2.toUpperCase();
+  splited1 = string1.split("");
+  console.log(splited1)
+  splited2 = string2.split("");
+
 
 }
 stringChecker(string1, string2)
