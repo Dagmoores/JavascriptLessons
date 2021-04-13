@@ -15,10 +15,13 @@ function stringChecker(string1, string2) {
   splited2 = string2.split("");
 
   for(i = 0; i < splited1.length; i++) {
-    p = 0
+    p = 0;
     while(splited1[i] == splited2[p]) {
       p++
+    } if (i != (p -1)) {
+      return false;
+    } else {
+      return true;
     }
-  }
-}        
-
+    }   
+}
