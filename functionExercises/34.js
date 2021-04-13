@@ -9,6 +9,8 @@ let checker1 = [];
 let checker2 = [];
 
 function stringChecker(string1, string2) {
+  string1 = string1.toUpperCase;
+  string2 = string2.toUpperCase;
   checker1 = string1.split("");
   checker2 = string2.split("");
   if(checker1 == checker2) {
