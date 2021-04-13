@@ -10,8 +10,9 @@ let vectorInt = [1, 9, 8, 10]
 let vectorStd = ["twelve", "Twenty Four", "Twenty Five", "Thirty"]
 let vectorDouble = [0.23, 1.25, 6.389, 0.65]
 
-function concat() {
-  return [].concat(vectorInt, vectorStd, vectorDouble)
+function concat(x, y) {
+  return [].concat(x, y)
 }
 
-console.log(concat())
+console.log(concat(vectorInt, vectorStd))
+console.log(concat(vectorDouble, vectorStd))
