@@ -3,12 +3,15 @@ variados e que retornará True ou False caso todos os caracteres
 (independentemente de ser maiúsculo ou minúsculo) estejam contidos em
 ambas palavras. */
 
-let string1 = "abc";
-let string2 = "ABC";
-let splited1 = [];
-let splited2 = [];
+
 
 function stringChecker(string1, string2) {
+  
+string1 = "abc";
+string2 = "ABC";
+splited1 = [];
+splited2 = [];
+  
   string1 = string1.toUpperCase();
   string2 = string2.toUpperCase();
   splited1 = string1.split("");
@@ -18,10 +21,15 @@ function stringChecker(string1, string2) {
     p = 0;
     while(splited1[i] == splited2[p]) {
       p++
-    } if (i != (p -1)) {
-      return false;
-    } else {
-      return true;
     }
     }   
+if (i != (p - 1)) {
+  return false;
+} else {
+  return true;
 }
+console.log(i)
+console.log(p)
+}
+
+stringChecker();
