@@ -12,9 +12,13 @@ function stringChecker(string1, string2) {
   string1 = string1.toUpperCase();
   string2 = string2.toUpperCase();
   splited1 = string1.split("");
-  console.log(splited1)
   splited2 = string2.split("");
 
+  for(i = 0; i < splited1.length; i++) {
+    p = 0
+    while(splited1[i] == splited2[p]) {
+      p++
+    }
+  }
+}        
 
-}
-stringChecker(string1, string2)
