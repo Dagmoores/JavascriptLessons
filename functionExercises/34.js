@@ -9,6 +9,7 @@ function stringChecker(string1, string2) {
   
 string1 = "abc";
 string2 = "ABC";
+p = 0; 
 splited1 = [];
 splited2 = [];
   
@@ -18,18 +19,16 @@ splited2 = [];
   splited2 = string2.split("");
 
   for(i = 0; i < splited1.length; i++) {
-    p = 0;
     while(splited1[i] == splited2[p]) {
-      p++
+    p++
     }
     }   
-if (i != (p - 1)) {
+if (i != p) {
   return false;
 } else {
   return true;
 }
-console.log(i)
-console.log(p)
+
 }
 
 stringChecker();
