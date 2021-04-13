@@ -12,10 +12,10 @@ function stringChecker(string1, string2) {
   checker1 = string1.split("");
   checker2 = string2.split("");
   if(checker1 == checker2) {
-    true
+    return true;
   } else {
-    false
+    return false;
   }
 
 }
-console.log(string1.split())
+stringChecker(string1, string2)
