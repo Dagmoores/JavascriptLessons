@@ -19,8 +19,11 @@ splited2 = [];
   splited2 = string2.split("");
 
   for(i = 0; i < splited1.length; i++) {
+    console.log("valor do i fora", i)
     while(splited1[i] == splited2[p]) {
     p++
+      console.log("valor do i", i)
+      console.log("valor do p", p)
     }
     }   
 if (i != p) {
