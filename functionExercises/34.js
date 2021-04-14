@@ -7,8 +7,8 @@ let tester;
 
 function stringChecker(string1, string2) {
   
-string1 = "cba";
-string2 = "ABCd";
+string1 = "ROMA";
+string2 = "amoR";
 
 splited1 = [];
 splited2 = [];
@@ -33,6 +33,9 @@ splited2 = [];
           tester = true;
         }
        }
+  if(splited1.length != splited2.length) {
+    tester = false;
+  }
   console.log(tester);
 }
 
