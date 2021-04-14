@@ -8,6 +8,10 @@ imprima os vetores no console. */
 let vectorStack = [1, 2, 3, 4, 5];
 let vectorAdd = [6, 7, 8, 9, 10];
 
-console.log(vectorStack)
-vectorStack = vectorStack.push(vectorAdd[1])
+console.log(vectorStack);
+
+for (i = 0; i < vectorAdd.length; i++) {
+  vectorStack.push(vectorAdd[i])
+}
+
 console.log(vectorStack)
