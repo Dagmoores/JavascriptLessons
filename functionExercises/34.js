@@ -8,7 +8,7 @@ let tester;
 function stringChecker(string1, string2) {
   
 string1 = "cba";
-string2 = "ABC";
+string2 = "ABCd";
 
 splited1 = [];
 splited2 = [];
@@ -26,13 +26,14 @@ splited2 = [];
          if (splited2[p] === undefined) {
            break;
          } else {
-           p++
+           p++;
          }
        } 
-        if (splited1[i]) === splited2[p]) {
+        if (splited1[i] === splited2[p]) {
           tester = true;
         }
        }
+  console.log(tester);
 }
 
 
