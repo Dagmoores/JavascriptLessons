@@ -7,8 +7,8 @@ let tester;
 
 function stringChecker(string1, string2) {
   
-string1 = "abc";
-string2 = "ABCh";
+string1 = "cba";
+string2 = "ABC";
 
 splited1 = [];
 splited2 = [];
@@ -19,16 +19,19 @@ splited2 = [];
   splited2 = string2.split("");
 
     for(i = 0; i < splited1.length; i++) {
-     for(p = 0; p < splited2.length; p++) {
-       if(splited1[i] == splited2[p]) {
-         tester = true;
-       } else {
-         tester = false;
+      let p = 0;
+       while(splited1[i] != splited2[p]) {
+         p++
+         tester = false; 
+         if (splited2[p] === undefined) {
+           break;
+         }
+        if (splited1[i]) === splited2[p]) {
+          tester = true;
+        }
+         }
+
        }
-     }
-    }  
-  return tester;
-}
 
 
 
