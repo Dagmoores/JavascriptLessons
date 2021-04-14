@@ -20,19 +20,20 @@ splited2 = [];
 
     for(i = 0; i < splited1.length; i++) {
       let p = 0;
+      
        while(splited1[i] != splited2[p]) {
-         p++
          tester = false; 
          if (splited2[p] === undefined) {
            break;
+         } else {
+           p++
          }
+       } 
         if (splited1[i]) === splited2[p]) {
           tester = true;
         }
-         }
-
        }
-
+}
 
 
 stringChecker();
