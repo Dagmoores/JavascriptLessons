@@ -9,15 +9,19 @@ por si próprio e pela unidade. */
 
 function testPrime () {
 let numbers = [1, 2, 17, 13, 15]
+let primeNumbers
 
 for (i = 0; i < numbers.length; i++) {
-  for(p = 2; p <= 7; p++) {
-    if (numbers[i] % p == 0) {
-      numbers.pop(numbers[i])
-    } 
-  } 
-}
-  console.log(numbers)
-}
+   for(p = 2; p <= 7; p++) {
+
+     if(numbers[i] % p != 0) {
+       primeNumbers.push(numbers[i])
+     } else if (numbers[i] % p == 0) {
+       primeNumbers.pop()
+     }
+   }
+ } 
+  console.log(primeNumbers[i])
+} 
 
 testPrime()
