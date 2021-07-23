@@ -3,3 +3,9 @@ função) e com ponto de exclamação "!" no final.
 Exemplos:
 cumprimentar("Leonardo") // retornará "Olá, Leonardo!"
 cumprimentar("Maria") // retornará "Olá, Maria!"
+
+function retornarStringConcat (palavra) {
+	return console.log(`Olá, ${palavra}!`)
+}
+
+retornarStringConcat('Daniel')
