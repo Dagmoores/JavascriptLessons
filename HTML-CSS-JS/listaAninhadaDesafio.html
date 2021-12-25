@@ -1,0 +1,47 @@
+<h1>Projeto</h1>
+<ul class="tree">
+    <li> <button type="button" onclick= "mudarEstado('Backend')">Backend</button>
+        <ul id = "Backend">
+            <li><button type="button" onclick= "mudarEstado('app')">app</button>
+                <ul id="app">
+                    <li>produto.js</li>
+                    <li>usuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+            <li><button type="button" onclick= "mudarEstado('config')">config</button>
+                <ul id="config">
+                    <li>banco.js</li>
+                    <li>rotas.js</li>
+                    <li>servidor.js</li>
+                </ul>
+            </li>
+        </ul>
+    </li> 
+    <li><button type="button" onclick= "mudarEstado('Frontend')">Frontend</button>
+        <ul id="Frontend">
+            <li>
+                <button type="button" onclick= "mudarEstado('public')">public</button>
+                <ul id="public">
+                    <li>app.js</li>
+                    <li>css.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    function mudarEstado(element) {
+        var display = document.getElementById(element).style.display;
+
+        if (display == "none") {
+            document.getElementById(element).style.display = "block" }
+
+        else {
+            document.getElementById(element).style.display = "none"
+        }
+    }
+</script>
