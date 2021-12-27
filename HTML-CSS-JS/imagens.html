@@ -1,0 +1,120 @@
+<div wm-slider>
+
+<p id = '1'>
+            <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg"
+            alt="Muro da Cidade"
+            width="513" height="342"
+            title="Muro da Cidade por Tarso Bessa"/>
+</p>
+
+<p id = '2'>
+            <img src="http://files.cod3r.com.br/curso-web/imagem2.gif"
+            alt="Intro Cod3r" 
+            height="280" width="300"
+            title="Video de introdução da Cod3r"/>
+</p>
+
+<p id = '3'>
+            <img src="http://files.cod3r.com.br/curso-web/imagem3.png"
+            alt="Rio de janeiro" height="342" 
+            />
+</p>
+
+<p id = '4'>
+            <img src="http://files.cod3r.com.br/curso-web/avatar.jpg"
+            alt ="Avatar" height="50">
+</p>
+ 
+</div>
+
+<button type="button" id="botaoEsquerda">Próxima</button>
+<button type="button" id="botaoDireita">Anterior</button>
+
+
+<style>
+
+    p {
+        position: absolute;
+        display: none;
+        max-width: 300px;
+    }
+
+    .circular {
+        width:513px;
+    }
+
+
+    #botaoEsquerda {
+        margin-top: 30px;
+        margin-left: 125px;
+    }
+
+    #botaoDireita {
+        margin-left: 520px;
+        margin-top: 30px;
+    }
+
+    div[wm-slider] {
+        background-color: black;
+        width: 500px;
+        height: 300px;
+        margin-left: 200px;
+    }
+
+    </style>
+
+
+<script>
+
+
+let i = 0
+
+    function mudarFoto() {
+               
+            
+            if (i == 0) {
+                document.getElementById('4').style.display = "none"
+                document.getElementById('1').style.display = "inline"
+                document.getElementById('2').style.display = "none"
+            }
+            if (i == 1) {
+                document.getElementById('1').style.display = "none"
+                document.getElementById('2').style.display = "inline"
+                document.getElementById('3').style.display = "none"
+            }
+            if (i == 2) {
+                document.getElementById('2').style.display = "none"
+                document.getElementById('3').style.display = "inline"
+                document.getElementById('4').style.display = "none"
+            }
+            if (i == 3) {
+                document.getElementById('3').style.display = "none"
+                document.getElementById('4').style.display = "inline"
+                document.getElementById('1').style.display = "none"
+            }
+    }
+
+    document.getElementById('botaoEsquerda').onclick = function() {
+            i++
+            console.log(i)
+            mudarFoto()
+            if (i == 4) 
+            {
+                i = 0
+                mudarFoto()
+                }
+            }
+    document.getElementById('botaoDireita').onclick = function() {
+            i--
+            console.log(i)
+            mudarFoto()
+            if ( i == -1)
+            {
+                i = 3
+                mudarFoto()
+            }
+        }
+
+            mudarFoto()  
+
+</script>
