@@ -26,10 +26,10 @@
 
     .progresso > div {
         background-color: red;
-        color: red;
+        color: white;
         height: 100%;
         width: 0%;
-        text-align: right;
+        text-align: center;
         font-size: 14px;
     } 
 </style>
@@ -39,22 +39,30 @@
     const video = document.querySelector("video")
     const play = document.querySelector("button[wm-player]")
     const pause = document.querySelector("button[wm-pause]")
+    let valorPercentual
+    let contador
 
-    const apertarPlay = play.addEventListener("click", 
-    function iniciar(estado) {
-        video.play();
-
-        setInterval(function() {
+    play.onclick = () => video.play();
+    pause.onclick = () => video.pause()
+    
+    video.addEventListener("play", function () {
+    
+        contador = setInterval(function() {
 
         document.querySelector(".progresso > div").style.width = 
         ((document.querySelector(".progresso").offsetWidth * video.currentTime) / video.duration) + "px"
 
-        console.log(document.querySelector(".progresso > div").style.width)
+        valorPercentual = 100 * parseFloat(document.querySelector(".progresso > div").style.width) /
+        document.querySelector(".progresso").offsetWidth
+
+        document.querySelector(".progresso>div").innerHTML = valorPercentual.toFixed(2) + '%'
+        console.log("testes")
+
         }, 100)
+
             }
                 )
 
-    
-        const apertarPause = pause.addEventListener("click", () => video.pause())
+    video.addEventListener("pause", () => clearInterval(contador))
 
 </script>
