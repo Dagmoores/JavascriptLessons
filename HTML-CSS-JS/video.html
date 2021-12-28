@@ -42,27 +42,44 @@
     let valorPercentual
     let contador
 
+
     play.onclick = () => video.play();
     pause.onclick = () => video.pause()
     
-    video.addEventListener("play", function () {
+
+    //PLAY
+    video.addEventListener('play', function () {
     
-        contador = setInterval(function() {
+    contador = setInterval(function() {
 
-        document.querySelector(".progresso > div").style.width = 
-        ((document.querySelector(".progresso").offsetWidth * video.currentTime) / video.duration) + "px"
+    document.querySelector(".progresso > div").style.width = 
+    ((document.querySelector(".progresso").offsetWidth * video.currentTime) / video.duration) + "px"
 
-        valorPercentual = 100 * parseFloat(document.querySelector(".progresso > div").style.width) /
-        document.querySelector(".progresso").offsetWidth
+    valorPercentual = 100 * parseFloat(document.querySelector(".progresso > div").style.width) /
+    document.querySelector(".progresso").offsetWidth
 
-        document.querySelector(".progresso>div").innerHTML = valorPercentual.toFixed(2) + '%'
-        console.log("testes")
+    document.querySelector(".progresso>div").innerHTML = valorPercentual.toFixed(2) + '%'
 
-        }, 100)
+    }, 100)
+        }
+            )
+        
+    
+    //SEEKED
+    video.addEventListener('seeked', function () {
 
-            }
-                )
+    document.querySelector(".progresso > div").style.width = 
+    ((document.querySelector(".progresso").offsetWidth * video.currentTime) / video.duration) + "px"
 
-    video.addEventListener("pause", () => clearInterval(contador))
+    valorPercentual = 100 * parseFloat(document.querySelector(".progresso > div").style.width) /
+    document.querySelector(".progresso").offsetWidth
+
+    document.querySelector(".progresso>div").innerHTML = valorPercentual.toFixed(2) + '%'
+
+
+    })
+
+    //PAUSE
+    video.addEventListener('pause', () => clearInterval(contador))
 
 </script>
