@@ -110,7 +110,6 @@
             margin-left: 4px;
             padding: 8px 16px;
             background-color: #e0313b;
-            /* border-radius: 30%  30% 30% 30%; */
             border-radius: 2em;
         }
     }
@@ -152,7 +151,12 @@
     </header>
 
     <script>
-        // ...
+        document.querySelectorAll("li").forEach(li => {
+            
+            li.addEventListener("mouseover", () => li.style.backgroundColor = "blue") 
+        });
+        
+        
     </script>
 </body>
 
