@@ -6,8 +6,8 @@
     <title>Desafio Menu</title>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
     <style>
-
 
     body {
         background-color: #d4d2d4;
@@ -17,23 +17,104 @@
     header {
         background-color: #343334;
         padding: 10px;
+        height: 10vh;
+        border-bottom: solid 5px #6baad5;
     }
 
     .logo {
         display: inline-block;
-        width: 40%;
+        min-width: 20%;
     }
     .logo img {
+        display: inline-block;
         height: 60px;
-        width: auto;
     }
 
     .menu-toggle {
-        display: inline-block;
-        text-align: right;
+        display: none;
+        width: 50%;
+        }
+
+    .menu {
+        display: none;
     }
 
+    .autenticacao {
+        display: none;
+    }
 
+    @media (max-width: 730px) {
+        .menu-toggle {
+        display: inline-block;
+        position: absolute;
+        right: 3%;
+        top: 2.9%;
+        background-color: #565556;
+        color: white;
+        border-radius: 5px;
+        width: 55px;
+        height: 40px;
+        }
+
+        .fa {
+        position: absolute; 
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        }
+    }
+
+    @media (min-width: 731px) {
+        .menu {
+            display: inline-block;
+            position: absolute;
+            top: 1%;
+        }
+
+        .menu ul li{
+            display: inline-block;
+            list-style: none;
+            font-size: 150%;
+            font-family: Oswald;
+            margin-left: 30px;
+        }
+        
+        .menu ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 100%;
+        }
+
+    
+    @media (min-width: 971px) {
+        .autenticacao {
+            display: inline-block;
+            position: absolute;
+            right: 3%;
+            top: 3.5%;
+            
+        }
+
+        .autenticacao a {
+            text-decoration: none;
+            color: white;
+            font-family: Oswald;
+            font-size: 150%;
+        }
+
+        .autenticacao a:first-child {
+            font-weight: bolder;
+        }
+
+        .botao {
+            margin-left: 4px;
+            padding: 8px 16px;
+            background-color: #e0313b;
+            /* border-radius: 30%  30% 30% 30%; */
+            border-radius: 2em;
+        }
+    }
+    }
 
     </style>
 </head>
