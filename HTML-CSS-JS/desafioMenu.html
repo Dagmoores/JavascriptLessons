@@ -71,18 +71,26 @@
             top: 1%;
         }
 
+        .menu ul {
+            padding: 10px;
+        }
+
         .menu ul li{
             display: inline-block;
+            position: relative;
             list-style: none;
             font-size: 150%;
             font-family: Oswald;
             margin-left: 30px;
+            bottom: 5px;
+          
         }
         
         .menu ul li a{
             text-decoration: none;
             color: white;
             font-size: 100%;
+            padding: 5%;
         }
 
     
@@ -121,7 +129,7 @@
 <body>
     <header class="cabecalho">
         <div class="logo">
-            <a href="#inicio">
+            <a href="desafioMenu.html">
                 <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
             </a>
         </div>
@@ -130,16 +138,16 @@
         </button>
         <nav class="menu">
             <ul>
-                <li>
+                <li id="inicio">
                     <a href="#inicio">Início</a>
                 </li>
-                <li>
+                <li id="cursos">
                     <a href="#cursos">Cursos</a>
                 </li>
-                <li>
+                <li id="sobre">
                     <a href="#sobre">Sobre</a>
                 </li>
-                <li>
+                <li id="contato">
                     <a href="#contato">Contato</a>
                 </li>
             </ul>
@@ -151,10 +159,51 @@
     </header>
 
     <script>
-        document.querySelectorAll("li").forEach(li => {
-            
-            li.addEventListener("mouseover", () => li.style.backgroundColor = "blue") 
-        });
+        document.querySelectorAll("li>a").forEach(li => {
+
+
+            li.addEventListener("mouseover", () => li.style.backgroundColor = "#68a9da") 
+
+            li.addEventListener("mouseout", () => li.style.backgroundColor = "transparent")
+
+        })
+
+
+        
+
+        window.onhashchange = () => {
+
+
+            function retirarBackground() {document.querySelectorAll("li").forEach(
+                li => li.style.backgroundColor = "transparent")}
+
+            if (location.hash == '') {
+                retirarBackground()
+            }
+            if(location.hash == "#inicio") {
+                retirarBackground()
+
+                document.getElementById("inicio").style.backgroundColor = "#68a9da"
+            }
+
+            if(location.hash == "#cursos") {
+                retirarBackground()
+
+                document.getElementById("cursos").style.backgroundColor = "#68a9da"
+            }
+
+            if(location.hash == "#sobre") {
+                retirarBackground()
+
+                document.getElementById("sobre").style.backgroundColor = "#68a9da"
+            }
+
+            if(location.hash == "#contato") {
+                retirarBackground()
+
+                document.getElementById("contato").style.backgroundColor = "#68a9da"
+            }
+        }
         
         
     </script>
