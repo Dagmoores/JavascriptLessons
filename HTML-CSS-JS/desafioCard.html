@@ -6,28 +6,50 @@
     <title>Desafio Card</title>
 
     <style>
+   
 
-        
         .curso {
-            position: relative;
+            float:left;
             margin:20px;
             box-sizing: border-box;
-            border: solid 1px black;
-            width: 262px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 260px;
             height: 300px;
+            padding: 5px;
+            box-shadow: 2px 4px 20px 0px rgba(5, 5, 5, 0.5);
         }
 
         .curso img{
-            position: relative;
-            width: 250px;
-            margin: 10px;
-            align-self: start;
+            width: 100%;
         }
 
         .curso-info {
-            display: block;
-            position: relative;
-            align-self: start;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 19px;
+            overflow: hidden;
+            max-height: 28%;
+        }
+
+        .curso-info h4 {
+            margin:auto;
+        }
+
+        .curso-preco {
+            float: right;
+            padding: 10px;
+        }
+
+        .preco-de {
+            font-size: 15px;
+            color: red;
+            text-decoration:line-through;
+        }
+
+        .preco-por {
+            font-size: 25px;
+            font-weight: bolder;
+            color: green;
         }
 
     </style>
