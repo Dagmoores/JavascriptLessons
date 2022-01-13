@@ -1,5 +1,5 @@
 const div = document.querySelector("div")
-const coluna = document.querySelectorAll("[coluna]")
+let coluna = document.querySelectorAll("[coluna]")
 const borda = document.querySelectorAll("[borda]")
 const novaDivPai = document.createElement('div')
 const novaDivFilho = document.createElement('div')
@@ -7,7 +7,7 @@ const novaDivFilho = document.createElement('div')
 
 
 
-function iniciar() {
+function deslocarColunasDireita() {
     coluna.forEach(e => e.style.right = "18%")
 }
 
@@ -17,9 +17,10 @@ function iniciar() {
 	function criarDivCima() {
 	novaDivPai.className = 'coluna-cima'
 	novaDivPai.setAttribute('coluna', '')
+	novaDivFilho.className = 'borda-coluna-cima'
+	deslocarColunasDireita()
 	div.appendChild(novaDivPai)
 	novaDivPai.appendChild(novaDivFilho)
-	novaDivFilho.className = 'borda-coluna-cima'
 	}
 
 
@@ -29,17 +30,16 @@ div.onclick = e => {
 
 
     //Inicio
-    iniciar()
+    deslocarColunasDireita()
 	
 
 	
 
     //Mecanica
     setInterval(function() { 
-
-    // coluna.forEach(e => checarPosicao(e))
-
-    coluna.forEach(e => {
+	
+ 
+		coluna.forEach(e => {
 
 		//Movimento das colunas
         let rightNumerico = parseInt(e.style.right)
@@ -48,12 +48,11 @@ div.onclick = e => {
 	
 		//desaparecimento e surgimento de colunas
 		if (rightNumerico > 75) {
-			e.style.display = "none"
+			e.remove()
 		}
 		
-		if(rightNumerico == 53) {
+		if (rightNumerico == 53) {
 			criarDivCima()
-			
 			
 			}
 	
