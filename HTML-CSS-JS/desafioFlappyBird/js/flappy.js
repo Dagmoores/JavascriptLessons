@@ -1,27 +1,36 @@
 const div = document.querySelector("div")
-let coluna = document.querySelectorAll("[coluna]")
-const borda = document.querySelectorAll("[borda]")
 const novaDivPai = document.createElement('div')
 const novaDivFilho = document.createElement('div')
 
 
+//função selecionar colunas
+function selecionar() {
+    const coluna = document.querySelectorAll("[coluna]")
+    return coluna
+}
 
-
-function deslocarColunasDireita() {
-    coluna.forEach(e => e.style.right = "18%")
+//função para deslocar colunas à direita
+function deslocarColunasDireita(e) {
+    e.forEach(e => e.style.right = "18%")
 }
 
 
+//função para criar div cima
+function criarDivCima() {
 
-	//função criar div cima
-	function criarDivCima() {
-	novaDivPai.className = 'coluna-cima'
-	novaDivPai.setAttribute('coluna', '')
-	novaDivFilho.className = 'borda-coluna-cima'
-	deslocarColunasDireita()
-	div.appendChild(novaDivPai)
+    //criando divs cima e fazendo append 
+    div.appendChild(novaDivPai)
 	novaDivPai.appendChild(novaDivFilho)
-	}
+
+    //atribuindo classe e atributo personalizado para divs cima
+	novaDivPai.className = 'coluna-cima'
+    novaDivPai.setAttribute('coluna', '')
+    novaDivPai.setAttribute('nova', '')
+	novaDivFilho.className = 'borda-coluna-cima'
+
+    //retornando variavel para ser utilizada em outros escopos 
+    return novaColuna = document.querySelector('[nova]')
+}
 
 
 
@@ -29,32 +38,42 @@ function deslocarColunasDireita() {
 div.onclick = e => {
 
 
-    //Inicio
-    deslocarColunasDireita()
+    //Inicio - Deslocando colunas à direita
+    deslocarColunasDireita(selecionar())
 	
-
-	
-
-    //Mecanica
+    //Mecanica 
     setInterval(function() { 
 	
  
-		coluna.forEach(e => {
+		[...selecionar()].forEach(e => {
 
 		//Movimento das colunas
         let rightNumerico = parseInt(e.style.right)
         rightNumerico += 5
         e.style.right = `${rightNumerico}%`
 	
-		//desaparecimento e surgimento de colunas
-		if (rightNumerico > 75) {
-			e.remove()
+
+        if (rightNumerico == 43) {
+
+            //criando nova coluna e guardando valor em constante
+            criarDivCima()   
+
+
+            //Deslocando nova coluna para a direita
+            deslocarColunasDireita([novaColuna])
+
+
+            //removendo atributo 'nova' para que a coluna não seja reiniciada
+            novaColuna.removeAttribute('nova')
+
+
+            //novaColuna.removeAtribute('nova')
+
+            
+
+        
 		}
-		
-		if (rightNumerico == 53) {
-			criarDivCima()
-			
-			}
+
 	
 		console.log(rightNumerico)
 			}
