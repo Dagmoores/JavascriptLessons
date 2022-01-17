@@ -209,5 +209,6 @@ div.addEventListener("click", e => {
 }, {once:true})   
 
 
-//Mecanica Movimento do passaro
+//Mecanica movimento subida do passaro
 	document.querySelector('html').addEventListener("click", e => movimentoPassaroSubir())
+
