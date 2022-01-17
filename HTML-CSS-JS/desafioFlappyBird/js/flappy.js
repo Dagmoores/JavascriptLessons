@@ -1,4 +1,5 @@
 const div = document.querySelector("div")
+const passaro = document.querySelector("img")
 
 const novaDivPaiCima1 = document.createElement('div')
 const novaDivFilhoCima1 = document.createElement('div')
@@ -112,10 +113,41 @@ function criarColuna3() {
 }
 
 
+//função movimento do passaro subir	
+function movimentoPassaroSubir() {
+	
+	if(passaro.style.paddingBottom == '') {
+		
+		passaro.style.paddingBottom = "5%"	
+}
+	else {
+	parseIntPaddingBottomPassaro = parseInt(passaro.style.paddingBottom)  
+	parseIntPaddingBottomPassaro += 5
+	passaro.style.paddingBottom = `${parseIntPaddingBottomPassaro}%`
+	}
+}
+
+
+//função movimento do passaro descer
+function movimentoPassaroDescer() {
+
+	if(passaro.style.paddingTop == '') {
+		
+	passaro.style.paddingTop  = "0%"
+	}
+	
+	else{
+	parseIntPaddingTopPassaro = parseInt(passaro.style.paddingTop) 
+	parseIntPaddingTopPassaro += 5
+	passaro.style.paddingTop = `${parseIntPaddingTopPassaro}%`
+	}
+}
+
+
 
 
 //Mecanica Movimento das colunas
-div.onclick = e => {
+div.addEventListener("click", e => {
 
 
     //Inicio - Deslocando colunas à direita
@@ -157,17 +189,25 @@ div.onclick = e => {
 			
 			document.querySelector('[coluna]').remove()	
 		}
-			}
+		
+			}	
 		)       
 		}
 		, 300)
-}   
+		
+		setInterval(
+
+		//movimento automatico de queda do passaro
+		//movimentoPassaroDescer(), 100)
+		console.log("teste"), 100)
+		
+		
+		
+		
+		
+}, {once:true})   
 
 
 //Mecanica Movimento do passaro
-function movimentoPassaro() {
-	
-	document.addEventListener("click", 
-	
-}
+	document.querySelector('html').addEventListener("click", e => movimentoPassaroSubir())
 
