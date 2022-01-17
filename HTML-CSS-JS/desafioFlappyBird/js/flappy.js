@@ -122,7 +122,7 @@ function movimentoPassaroSubir() {
 }
 	else {
 	parseIntPaddingBottomPassaro = parseInt(passaro.style.paddingBottom)  
-	parseIntPaddingBottomPassaro += 5
+	parseIntPaddingBottomPassaro += 10
 	passaro.style.paddingBottom = `${parseIntPaddingBottomPassaro}%`
 	}
 }
@@ -138,7 +138,7 @@ function movimentoPassaroDescer() {
 	
 	else{
 	parseIntPaddingTopPassaro = parseInt(passaro.style.paddingTop) 
-	parseIntPaddingTopPassaro += 5
+	parseIntPaddingTopPassaro += 6
 	passaro.style.paddingTop = `${parseIntPaddingTopPassaro}%`
 	}
 }
@@ -198,8 +198,9 @@ div.addEventListener("click", e => {
 		setInterval(
 
 		//movimento automatico de queda do passaro
-		//movimentoPassaroDescer(), 100)
-		console.log("teste"), 100)
+		e => movimentoPassaroDescer()
+		
+		, 200)
 		
 		
 		
