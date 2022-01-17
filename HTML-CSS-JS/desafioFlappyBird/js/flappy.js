@@ -114,6 +114,7 @@ function criarColuna3() {
 
 
 
+//Mecanica Movimento das colunas
 div.onclick = e => {
 
 
@@ -121,7 +122,7 @@ div.onclick = e => {
     deslocarColunasDireita(selecionar())
 	
 	
-    //Mecanica 
+     
 		setInterval(function() { 
 	
 		[...selecionar()].forEach(e => {
@@ -161,3 +162,12 @@ div.onclick = e => {
 		}
 		, 300)
 }   
+
+
+//Mecanica Movimento do passaro
+function movimentoPassaro() {
+	
+	document.addEventListener("click", 
+	
+}
+
