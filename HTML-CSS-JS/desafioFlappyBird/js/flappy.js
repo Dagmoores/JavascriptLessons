@@ -1,14 +1,19 @@
 const div = document.querySelector("div")
-const novaDivPaiCima = document.createElement('div')
-const novaDivPaiBaixo = document.createElement('div')
+
+const novaDivPaiCima1 = document.createElement('div')
+const novaDivFilhoCima1 = document.createElement('div')
+const novaDivPaiBaixo1 = document.createElement('div')
+const novaDivFilhoBaixo1 = document.createElement('div')
+
 const novaDivPaiCima2 = document.createElement('div')
-const novaDivPaiBaixo2 = document.createElement('div')
-const novaDivFilhoCima = document.createElement('div')
-const novaDivFilhoBaixo = document.createElement('div')
 const novaDivFilhoCima2 = document.createElement('div')
+const novaDivPaiBaixo2 = document.createElement('div')
 const novaDivFilhoBaixo2 = document.createElement('div')
 
-
+const novaDivPaiCima3 = document.createElement('div')
+const novaDivFilhoCima3 = document.createElement('div')
+const novaDivPaiBaixo3 = document.createElement('div')
+const novaDivFilhoBaixo3 = document.createElement('div')
 
 
 //função selecionar colunas
@@ -26,22 +31,22 @@ function deslocarColunasDireita(e) {
 //função para criar coluna 1
 function criarColuna1() {
     //fazendo append do filho na div Pai
-	novaDivPaiCima.appendChild(novaDivFilhoCima)
-	novaDivPaiBaixo.appendChild(novaDivFilhoBaixo)
+	novaDivPaiCima1.appendChild(novaDivFilhoCima1)
+	novaDivPaiBaixo1.appendChild(novaDivFilhoBaixo1)
 
     //atribuindo classe e atributo personalizado para divs cima
-	novaDivPaiCima.className = 'coluna-cima'
-	novaDivFilhoCima.className = 'borda-coluna-cima'
-	novaDivPaiCima.setAttribute('coluna', '')
-    novaDivPaiCima.setAttribute('coluna1', '')
-	div.appendChild(novaDivPaiCima)
+	novaDivPaiCima1.className = 'coluna-cima'
+	novaDivFilhoCima1.className = 'borda-coluna-cima'
+	novaDivPaiCima1.setAttribute('coluna', '')
+    novaDivPaiCima1.setAttribute('coluna1', '')
+	div.appendChild(novaDivPaiCima1)
 	
 	//atribuindo classe e atributo personalizado para divs baixo
-	novaDivPaiBaixo.className = 'coluna-baixo'
-	novaDivFilhoBaixo.className = 'borda-coluna-baixo'
-	novaDivPaiBaixo.setAttribute('coluna', '')
-    novaDivPaiBaixo.setAttribute('coluna1', '')
-	div.appendChild(novaDivPaiBaixo)
+	novaDivPaiBaixo1.className = 'coluna-baixo'
+	novaDivFilhoBaixo1.className = 'borda-coluna-baixo'
+	novaDivPaiBaixo1.setAttribute('coluna', '')
+    novaDivPaiBaixo1.setAttribute('coluna1', '')
+	div.appendChild(novaDivPaiBaixo1)
 	
 	//atribuindo selecao de nova coluna a constante
 	const novaColuna = document.querySelectorAll('[coluna1]')
@@ -79,6 +84,36 @@ function criarColuna2() {
 }
 
 
+//função para criar coluna 3
+function criarColuna3() {
+    //fazendo append do filho na div Pai
+	novaDivPaiCima3.appendChild(novaDivFilhoCima3)
+	novaDivPaiBaixo3.appendChild(novaDivFilhoBaixo3)
+
+    //atribuindo classe e atributo personalizado para divs cima
+	novaDivPaiCima3.className = 'coluna-cima'
+	novaDivFilhoCima3.className = 'borda-coluna-cima'
+	novaDivPaiCima3.setAttribute('coluna', '')
+    novaDivPaiCima3.setAttribute('coluna3', '')
+	div.appendChild(novaDivPaiCima3)
+	
+	//atribuindo classe e atributo personalizado para divs baixo
+	novaDivPaiBaixo3.className = 'coluna-baixo'
+	novaDivFilhoBaixo3.className = 'borda-coluna-baixo'
+	novaDivPaiBaixo3.setAttribute('coluna', '')
+    novaDivPaiBaixo3.setAttribute('coluna3', '')
+	div.appendChild(novaDivPaiBaixo3)
+	
+	//atribuindo selecao de nova coluna a constante
+	const novaColuna = document.querySelectorAll('[coluna3]')
+	
+	//Deslocando nova coluna para a direita
+     deslocarColunasDireita([...novaColuna])
+}
+
+
+
+
 div.onclick = e => {
 
 
@@ -99,16 +134,19 @@ div.onclick = e => {
 		
 		
 		//criar colunas ao chegar em right 51
-        if (rightNumerico == 51 ) {
+        if (rightNumerico == 48 ) {
 				
 			
 			if(document.querySelector('[coluna1]') == null) {
 				
             //Criando nova coluna 
             criarColuna1() 	
-			} else if (document.querySelector('[coluna]') != null) {
+			
+			} else if (document.querySelector('[coluna2]') == null) {
 				criarColuna2()
-			}
+			} else if (document.querySelector('[coluna3]') == null) {
+					criarColuna3()
+			} 
 				
 		} 
 		
@@ -118,9 +156,6 @@ div.onclick = e => {
 			
 			document.querySelector('[coluna]').remove()	
 		}
-		
-			
-		
 			}
 		)       
 		}
