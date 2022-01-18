@@ -19,7 +19,7 @@ const novaDivFilhoBaixo3 = document.createElement('div')
 
 //função selecionar colunas
 function selecionar() {
-    const coluna = document.querySelectorAll("[coluna]")
+    this.coluna = document.querySelectorAll("[coluna]")
     return coluna
 }
 
@@ -116,34 +116,63 @@ function criarColuna3() {
 //função movimento do passaro subir	
 function movimentoPassaroSubir() {
 	
-	if(passaro.style.paddingBottom == '') {
+	if(passaro.style.top == '') {
 		
-		passaro.style.paddingBottom = "5%"	
+		passaro.style.top = "45%"	
 }
 	else {
-	parseIntPaddingBottomPassaro = parseInt(passaro.style.paddingBottom)  
-	parseIntPaddingBottomPassaro += 10
-	passaro.style.paddingBottom = `${parseIntPaddingBottomPassaro}%`
+	let parseIntTopPassaro = parseInt(passaro.style.top)  
+	parseIntTopPassaro -= 8
+	passaro.style.top = `${parseIntTopPassaro}%`
 	}
 }
 
 
 //função movimento do passaro descer
-function movimentoPassaroDescer() {
-
-	if(passaro.style.paddingTop == '') {
-		
-	passaro.style.paddingTop  = "0%"
-	}
-	
-	else{
-	parseIntPaddingTopPassaro = parseInt(passaro.style.paddingTop) 
-	parseIntPaddingTopPassaro += 6
-	passaro.style.paddingTop = `${parseIntPaddingTopPassaro}%`
+	function movimentoPassaroDescer() {
+		if(passaro.style.top == '') {
+			passaro.style.top = "45%"
+		}
+		else {
+		let parseIntTopPassaro = parseInt(passaro.style.top)
+		parseIntTopPassaro += 6
+		passaro.style.top = `${parseIntTopPassaro}%`
 	}
 }
 
 
+
+//função para colisões
+function estaColidindo() {
+
+		const array = [...selecionar()]
+		
+		for (i = 0; i < array.length; i++) 
+		
+		{
+				this.valorBooleano = !(
+				((getOffset(passaro).top + passaro.height) < (getOffset(array[i]).top)) ||
+				(getOffset(passaro).top > (getOffset(array[i]).top + array[i].offsetHeight)) ||
+				((getOffset(passaro).left + passaro.width) < getOffset(array[i]).left) ||
+				(getOffset(passaro).left > (getOffset(array[i]).left + array[i].offsetWidth))
+		)
+
+		if (this.valorBooleano == true)
+		{return true}
+	}	
+	
+}
+
+
+//This function returns an element's position relative to the whole document (page):
+//https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element
+function getOffset(el) {
+  const rect = el.getBoundingClientRect();
+  return {
+    left: rect.left + window.scrollX,
+    top: rect.top + window.scrollY
+  };
+}
 
 
 //Mecanica Movimento das colunas
@@ -155,7 +184,7 @@ div.addEventListener("click", e => {
 	
 	
      
-		setInterval(function() { 
+		this.contador = setInterval(function() { 
 	
 		[...selecionar()].forEach(e => {
 			
@@ -192,6 +221,12 @@ div.addEventListener("click", e => {
 		
 			}	
 		)       
+
+		estaColidindo()
+		if (estaColidindo() == true) {
+			clearInterval(contador)
+		}
+
 		}
 		, 300)
 		
@@ -200,12 +235,8 @@ div.addEventListener("click", e => {
 		//movimento automatico de queda do passaro
 		e => movimentoPassaroDescer()
 		
-		, 200)
-		
-		
-		
-		
-		
+		, 300)
+	
 }, {once:true})   
 
 
