@@ -1,9 +1,14 @@
+*{
+    overflow: hidden;
+}
+
 div[wm-flappy] {
     display: flex;
     height: 70%;
     width:65%;
     background-color: #53b5f3;
     justify-content: center;
+    
 }
 
 .naoSelecionavel {
@@ -17,9 +22,10 @@ div[wm-flappy] {
 }
 
 .passaro {
-    height: 5%;
+    height: 6%;
     width: 6%;
     align-self: center;
+    position: absolute;
 }
 
 
@@ -28,11 +34,12 @@ div[wm-flappy] {
     position:absolute;
     align-self: flex-start;
     background-color: #7ea236;
-    height: 26%;
+    height: 20%;
     width: 6%;
     border: solid 1px black;
     border-bottom: none;
     justify-content: center;
+    overflow: visible;
 }
 
 .borda-coluna-cima {
@@ -50,11 +57,12 @@ div[wm-flappy] {
     position:absolute;
     align-self: flex-end;
     background-color: #7ea236;
-    height: 26%;
+    height: 20%;
     width: 6%;
     border: solid 1px black;
     border-top: none;
     justify-content: center;
+    overflow: visible;
 }
 
 .borda-coluna-baixo {
