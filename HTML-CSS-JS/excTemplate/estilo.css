@@ -1,37 +1,116 @@
 body {
+	height: 1000px;
 	margin: 0px;
-	display:flex;
 	background-image: url("sit.jpg");
-	background-color: grey;
+	background-color: #cccccc;
 	background-repeat: no-repeat;
-	background-size: 100vw 40vw;
+	background-size: 100vw 500px;
 	
 }
 
 header {
-
+	display:flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
 }
 
 nav {
 	display:flex;
-	margin-left: auto;
-
+	justify-content: end;
+	flex-basis: 100%
 }
 
 .navegacao {
-			color: white;
-			border: solid 1px white;
-			margin: 10px;
-			height: 30px;
-			background-color:rgb(88,88,88, .5);
-			padding: 10px;
-			display: -webkit-flex;
-			display: flex;
-			align-items: center;
+	color: white;
+	border: solid 1px white;
+	margin: 10px;
+	height: 30px;
+	background-color:rgb(88,88,88, .5);
+	padding: 10px;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+}
+
+.slogan {
+	display: flex;
+	justify-content: center;
+	flex-basis: 100%;
+	text-align:center;
+	margin-top: 4%;
+	color:white;
+	text-shadow: 1px 2px black;
+	font-size: 30px;
 }
 
 h1 {
-	align-self: center;
-	margin-left: auto;
+	flex-basis: 10%;
+}
 
+.sub-titulo {
+	border-bottom: solid 1px white;
+	color: white;
+	background-color:rgba(5, 5, 5, 0.61);
+}
+
+.imagens-container {
+	display:flex;
+	justify-content: center;
+	align-content: center;
+	margin-top: 120px;
+	justify-content: center;
+	background-color: white;
+	min-width: fit-content;
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.imagem {
+	height:170px;
+	margin: 10px 0px 10px 10px;
+}
+
+.imagem3 {
+	margin-right: 10px;
+}
+
+.legenda {
+	position:relative;
+	color: white;
+	background-color:rgba(5, 5, 5, 0.61);
+	bottom: 23%;
+	height: 20px;
+	padding: 5px;
+	padding-top: 10px;
+}
+
+.textos {
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	width: 940px;
+	margin-top: 25px;
+	padding:10px;
+}
+
+.titulo {
+	display: flex;
+	font-weight: bold;
+	font-size: 30px;
+	height: 40px;
+	background-color: #eeeeee;
+	border-bottom: solid 3px #d0d0d0;
+	align-items: center;
+}
+
+footer {
+	display: flex;
+	height: 100px;
+	margin-top: 10px;
+	background-color: #6b6c68;
+	color: white;
+	justify-content: center;
+	align-items: center;
 }
