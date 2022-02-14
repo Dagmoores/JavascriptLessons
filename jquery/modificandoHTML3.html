@@ -20,6 +20,20 @@
             { nome: 'Julia', nota: 9.7 }
         ]
         
-        // ...
+        const tabela = $('<table>')
+        const linha = $('<tr>')
+        const coluna = $('<td>')
+
+        for(i = 0; i < pessoas.length; i++) {
+
+
+            //continuar... (o codigo nao foi testado)
+            linha.append(coluna).html(pessoas[i].nome, pessoas[i].nota)
+
+            
+
+        }
+
+
     </script>
 </body>
