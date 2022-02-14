@@ -25,15 +25,12 @@
         const coluna = $('<td>')
 
         for(i = 0; i < pessoas.length; i++) {
-
-
-            //continuar... (o codigo nao foi testado)
-            linha.append(coluna).html(pessoas[i].nome, pessoas[i].nota)
-
-            
-
+            linha.append(coluna.text(pessoas[i].nome))
+            linha.append(coluna.text(pessoas[i].nota))
+            tabela.append(linha)
         }
 
+        body.append(tabela)
 
     </script>
 </body>
