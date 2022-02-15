@@ -21,16 +21,28 @@
         ]
         
         const tabela = $('<table>')
-        const linha = $('<tr>')
-        const coluna = $('<td>')
+
+
+        function agregarTabela() {
 
         for(i = 0; i < pessoas.length; i++) {
-            linha.append(coluna.text(pessoas[i].nome))
-            linha.append(coluna.text(pessoas[i].nota))
-            tabela.append(linha)
+
+            const tableRow = $('<tr>')
+
+            tableRow.append([
+                $('<td>').text(pessoas[i].nome),
+                $('<td>').text(pessoas[i].nota) 
+                ])
+     
+
+            tabela.append(tableRow)         
         }
 
-        body.append(tabela)
+        $('#conteudo').append(tabela)
+
+        }
+
+        agregarTabela()
 
     </script>
 </body>
