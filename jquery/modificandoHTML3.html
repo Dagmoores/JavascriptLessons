@@ -13,36 +13,36 @@
     <div id='conteudo'></div>
 
     <script>
+
+        $(document).ready(function agregarTabela() {
+
+        //dados a serem inseridos na tabela
         const pessoas = [
-            { nome: 'Ana', nota: 9.1 },
-            { nome: 'Bianca', nota: 8.4 },
-            { nome: 'Carlos', nota: 7.6 },
-            { nome: 'Julia', nota: 9.7 }
-        ]
-        
+        { nome: 'Ana', nota: 9.1 },
+        { nome: 'Bianca', nota: 8.4 },
+        { nome: 'Carlos', nota: 7.6 },
+        { nome: 'Julia', nota: 9.7 }
+    ]  
+    
+        //definição da variável usada para criar a tabela
         const tabela = $('<table>')
 
-
-        function agregarTabela() {
-
-        for(i = 0; i < pessoas.length; i++) {
+        //utilizando a função map para inserção de dados na tabela
+        const linhas = pessoas.map(e => {
 
             const tableRow = $('<tr>')
 
             tableRow.append([
-                $('<td>').text(pessoas[i].nome),
-                $('<td>').text(pessoas[i].nota) 
+                $('<td>').text(e.nome),
+                $('<td>').text(e.nota) 
                 ])
-     
-
-            tabela.append(tableRow)         
-        }
-
+            return tableRow          
+        })
+        
+        tabela.append(linhas)
         $('#conteudo').append(tabela)
+})
 
-        }
-
-        agregarTabela()
 
     </script>
 </body>

@@ -15,6 +15,10 @@
     <div id='div3'>3</div>
     <div id='resultado'></div>
     <script>
-        // ...
+        const fonte = $('div').css('font-family')
+        $('#resultado').append(`A fonte é ${fonte}`)
+
+        $('#div2').css('font-size', '100px')
+        $('#div1').css({'font-size': '80px', 'color': 'green'})
     </script>
 </body>
