@@ -1,10 +1,10 @@
-//import do bootstrap
+/*import do bootstrap*/
 @import "~bootstrap/scss/bootstrap.scss";
 
-//import das fontes
+/*import das fontes*/
 $fa-font-path: "~font-awesome/fonts";
-//import dos arquivos scss (estilos) das fontes awesome 
+/*import dos arquivos scss (estilos) das fontes awesome*/
 @import "~font-awesome/scss/font-awesome.scss";
 
-//import do arquivo custom
+/*import do arquivo custom*/
 @import "./custom.scss"

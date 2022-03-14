@@ -1,21 +1,22 @@
-const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
     mode: 'development',
+    entry: './src/index.js',
     module: {
-        rules: [{
-            test: '/\.s[ac]ss$/i',
-            use: [
-                "sass-loader"
-            ]
+        rules: [
+            {
+            test: /\.(sass|css|scss)$/,
+            use: ["style-loader", "css-loader", "sass-loader"]
         }]
     },
     devServer: {
-        static: {
-            directory: path.join(__dirname + 'src/pages/template')
-        },
+        static: './src',
         compress: true,
-        port: 8080
-    }   
+        port: 9000
+    },
+    // output: {
+    //     filename: 'app.js',
+    //     path: __dirname + '/build'
+    // }   
 }
