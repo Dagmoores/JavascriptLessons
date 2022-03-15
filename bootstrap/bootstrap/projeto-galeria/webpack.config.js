@@ -1,4 +1,5 @@
 const webpack = require('webpack')
+const CopyWebPackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
     mode: 'development',
@@ -15,8 +16,8 @@ module.exports = {
         compress: true,
         port: 9000
     },
-    // output: {
-    //     filename: 'app.js',
-    //     path: __dirname + '/build'
-    // }   
+    output: {
+         filename: 'app.js',
+         path: __dirname + '/build'
+     }, 
 }

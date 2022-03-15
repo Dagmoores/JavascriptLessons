@@ -6,4 +6,4 @@ import 'jquery'
 import 'bootstrap'
 
 //Arquivos js
-import "./js/core/includes"
+import './js/core/includes'
